@@ -4,7 +4,10 @@ import TabTitle from "./TabTitle";
 import TabContent from "./TabContent";
 
 export default function TabsGrid() {
-  const [visibleId, setVisibleId] = useState(0);
+  const [selectedLanguage, setSelectedLanguage] = useState(null);
+
+  console.log("RENDERING:..");
+
   return (
     <>
       {/* TABS */}
@@ -14,8 +17,8 @@ export default function TabsGrid() {
             <TabTitle
               title={linguaggio.title}
               id={linguaggio.id}
-              visibleId={visibleId}
-              onClick={() => setVisibleId(linguaggio.id)}
+              visibleId={selectedLanguage?.id}
+              onClick={() => setSelectedLanguage(linguaggio)}
             />
           </div>
         ))}
@@ -23,15 +26,11 @@ export default function TabsGrid() {
 
       {/* SCHEDE */}
       <div className="row g-5 text-white p-5">
-        {languages.map((scheda, index) => (
-          <div className="col-auto" key={scheda.id}>
-            <TabContent
-              description={scheda.description}
-              id={index + 1}
-              visibleId={visibleId}
-            />
+        {selectedLanguage && (
+          <div className="col-auto" key={selectedLanguage.id}>
+            <TabContent description={selectedLanguage.description} />
           </div>
-        ))}
+        )}
       </div>
     </>
   );
