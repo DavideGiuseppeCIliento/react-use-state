@@ -10,3 +10,25 @@
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 8px;
 }
+
+.tab-title {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+  padding: 15px;
+}
+
+.tab-title:hover {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  background-color: white;
+  color: #333;
+  padding: 15px;
+}
+
+.tab-title.active {
+  background-color: orange;
+  color: white;
+  border: 1px solid orange;
+}
