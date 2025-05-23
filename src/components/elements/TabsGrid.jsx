@@ -13,6 +13,8 @@ export default function TabsGrid() {
           <div className="col-auto" key={linguaggio.id}>
             <TabTitle
               title={linguaggio.title}
+              id={linguaggio.id}
+              visibleId={visibleId}
               onClick={() => setVisibleId(linguaggio.id)}
             />
           </div>
