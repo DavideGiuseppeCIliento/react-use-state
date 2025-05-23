@@ -1,6 +1,13 @@
+import { useState } from "react";
 import languages from "../../data/languages";
 import TabTitle from "./TabTitle";
 import TabContent from "./TabContent";
+
+let [visibility, setVisibility] = useState(0);
+
+setVisibility = () => {
+  <TabContent description={scheda.description} idClicked={scheda.id} />;
+};
 
 export default function TabsGrid() {
   return (
@@ -9,19 +16,16 @@ export default function TabsGrid() {
       <div className="row g-5 text-white p-5">
         {languages.map((linguaggio) => (
           <div className="col-auto" key={linguaggio.id}>
-            <TabTitle
-              title={linguaggio.title}
-              description={linguaggio.description}
-            />
+            <TabTitle title={linguaggio.title} id={index + 1} />
           </div>
         ))}
       </div>
 
       {/* SCHEDE */}
       <div className="row g-5 text-white p-5">
-        {languages.map((scheda) => (
+        {languages.map((scheda, index) => (
           <div className="col-auto" key={scheda.id}>
-            <TabContent description={scheda.description} />
+            <TabContent description={scheda.description} id={index + 1} />
           </div>
         ))}
       </div>

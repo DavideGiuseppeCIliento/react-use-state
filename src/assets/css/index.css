@@ -36,3 +36,11 @@
 }
 
 /* CSS TAB */
+
+.visibile {
+  display: block;
+}
+
+.nascosto {
+  display: none;
+}
