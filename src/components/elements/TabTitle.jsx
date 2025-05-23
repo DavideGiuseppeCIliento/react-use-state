@@ -1,3 +1,7 @@
-export default function TabTitle({ title, id }) {
-  return <button className="tab-title ">{title}</button>;
+export default function TabTitle({ title, onClick }) {
+  return (
+    <button className="tab-title" onClick={onClick}>
+      {title}
+    </button>
+  );
 }
