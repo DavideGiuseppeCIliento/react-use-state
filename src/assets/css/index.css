@@ -11,6 +11,8 @@
   border-radius: 8px;
 }
 
+/* CSS TAB */
+
 .tab-title {
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 8px;
@@ -32,3 +34,5 @@
   color: white;
   border: 1px solid orange;
 }
+
+/* CSS TAB */
